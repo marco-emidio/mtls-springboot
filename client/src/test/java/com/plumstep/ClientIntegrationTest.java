@@ -18,15 +18,7 @@ import static org.junit.Assert.assertEquals;
 @SpringBootTest(webEnvironment = WebEnvironment.DEFINED_PORT, classes = {ClientApplication.class})
 public class ClientIntegrationTest {
 
-    @Autowired
-    private RestTemplate restTemplate;
-
-    private String serverUrl = "https://localhost:8111/server/";
-
     @Test
-    public void testGet() {
-        ResponseEntity<String> getResponse =
-                restTemplate.getForEntity(serverUrl, String.class);
-        assertEquals(HttpStatus.OK, getResponse.getStatusCode());
-    }
+	public void contextLoads() {
+	}
 }
